@@ -32,7 +32,7 @@ spec:
         - npm run build
       workingDir: /workspace/tektoncd-nodejs-tutorial-resources
     - name: build-push-image
-      image: gcr.io/kaniko-project/executor
+      image: gcr.io/kaniko-project/executor:debug
       command:
         - /kaniko/executor
       args:
