@@ -32,15 +32,17 @@ spec:
         - npm run build
       workingDir: /workspace/tektoncd-nodejs-tutorial-resources
     - name: build-push-image
-      image: gcr.io/kaniko-project/executor:debug
+      image: gcr.io/kaniko-project/executor
       command:
         - /kaniko/executor
       args:
         - --dockerfile=/workspace/tektoncd-nodejs-tutorial-resources/Dockerfile
         - --cache=true
-        - --destination=docker-registry.default.svc:5000/web-backend/tektoncd-nodejs-tutorial:latest
+        - --destination=image-registry.openshift-image-registry.svc:5000/web-backend/tektoncd-nodejs-tutorial:latest
         - --context=/workspace/tektoncd-nodejs-tutorial-resources
         - --skip-tls-verify
+      securityContext:
+        runAsUser: 0
     - name: run-image
       image: ebits/openshift-client
       command: ["oc"]
