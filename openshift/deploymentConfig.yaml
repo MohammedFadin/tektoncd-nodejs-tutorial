@@ -12,7 +12,7 @@ spec:
         traffic: "true"
     spec:
       containers:
-        - image: docker-registry.default.svc:5000/web-backend/tektoncd-nodejs-tutorial:latest
+        - image: image-registry.openshift-image-registry.svc:5000/web-backend/tektoncd-nodejs-tutorial:latest
           imagePullPolicy: Always
           name: tektoncd-nodejs-tutorial-image
           ports:
