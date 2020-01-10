@@ -10,7 +10,7 @@ RUN npm install
 
 COPY . .
 
-RUN rm -rf ~/app/.git/
+# RUN rm -rf ~/app/.git/
 
 EXPOSE 8080
 

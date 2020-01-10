@@ -1,0 +1,21 @@
+{
+  "name": "tektoncd-nodejs-tutorial",
+  "version": "1.0.0",
+  "description": "The perfect Hello World repo",
+  "main": "app.js",
+  "scripts": {
+    "start": "node .",
+    "build": "echo 'Give me something to Build!'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "hello",
+    "world"
+  ],
+  "author": "Mohammed Fadin",
+  "license": "ISC",
+  "dependencies": {
+    "http": "0.0.0"
+  }
+}

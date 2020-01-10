@@ -23,13 +23,13 @@ spec:
       args:
         - npm install
       workingDir: /workspace/tektoncd-nodejs-tutorial-resources
-    # - name: npm-build
-    #   image: node
-    #   command:
-    #     - /bin/sh
-    #     - -c
-    #   args:
-    #     - npm run build
+    - name: npm-build
+      image: node
+      command:
+        - /bin/sh
+        - -c
+      args:
+        - npm run build
       workingDir: /workspace/tektoncd-nodejs-tutorial-resources
     - name: build-push-image
       image: gcr.io/kaniko-project/executor
