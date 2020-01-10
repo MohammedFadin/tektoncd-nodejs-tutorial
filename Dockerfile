@@ -1,12 +1,12 @@
-FROM node:alpine
+FROM node:6.11
 
 RUN mkdir ~/app
 
 WORKDIR ~/app
 
-RUN npm install
-
 COPY . .
+
+RUN npm install
 
 EXPOSE 8080
 
