@@ -1,1 +1,7 @@
 **/.git
+.gitignore
+.DS_Store
+*.log
+newrelic_agent.log
+README.md
+node_modules
