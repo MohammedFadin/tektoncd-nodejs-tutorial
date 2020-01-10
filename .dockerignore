@@ -5,3 +5,5 @@
 newrelic_agent.log
 README.md
 node_modules
+**/openshift
+**/pipeline
