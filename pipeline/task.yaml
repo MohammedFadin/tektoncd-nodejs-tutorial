@@ -37,6 +37,7 @@ spec:
         - /kaniko/executor
       args:
         - --dockerfile=/workspace/tektoncd-nodejs-tutorial-resources/Dockerfile
+        - --cache=true
         - --destination=docker-registry.default.svc:5000/web-backend/tektoncd-nodejs-tutorial:latest
         - --context=/workspace/tektoncd-nodejs-tutorial-resources
         - --skip-tls-verify
@@ -44,6 +45,6 @@ spec:
       image: ebits/openshift-client
       command: ["oc"]
       args:
-        - create
+        - apply
         - -f
         - /workspace/tektoncd-nodejs-tutorial-resources/openshift/
