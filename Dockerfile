@@ -1,10 +1,10 @@
 FROM node:6.11
 
-RUN mkdir ~/app
+RUN mkdir /app
 
-WORKDIR ~/app
+COPY . /app
 
-COPY . .
+WORKDIR /app
 
 RUN npm install
 
