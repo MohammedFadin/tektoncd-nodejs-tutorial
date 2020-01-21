@@ -38,7 +38,7 @@ spec:
       args:
         - --dockerfile=/workspace/tektoncd-nodejs-tutorial-resources/Dockerfile
         - --cache=true
-        - --destination=image-registry.openshift-image-registry.svc:5000/web-backend/tektoncd-nodejs-tutorial:latest
+        - --destination=docker-registry.default.svc:5000/web-backend/tektoncd-nodejs-tutorial:latest
         - --context=/workspace/tektoncd-nodejs-tutorial-resources
         - --skip-tls-verify
       securityContext:
