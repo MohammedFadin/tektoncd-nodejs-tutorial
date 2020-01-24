@@ -2,7 +2,7 @@ apiVersion: tekton.dev/v1alpha1
 kind: TaskRun
 metadata:
   generateName: tektoncd-nodejs-tutorial-build-taskrun-
-  namespace: web-backend
+  namespace: ""
 spec:
   serviceAccount: pipeline-account
   inputs:
